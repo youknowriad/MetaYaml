@@ -1,7 +1,8 @@
 {
-    "name": "meta-yaml",
+    "name": "youknowriad/meta-yaml",
     "description": "Meta-Yaml to validate Yaml using Yaml",
     "keywords": ["yaml", "validation", "schema"],
+    "license": "MIT",
     "autoload": {
         "psr-0": {
             "RomaricDrigon\\MetaYaml": "src/"
@@ -9,7 +10,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/yaml": "dev-master",
+        "symfony/yaml": "2.*",
         "mageekguy/atoum": "dev-master"
     }
 }
