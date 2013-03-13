@@ -14,5 +14,10 @@
     },
     "require-dev": {
         "atoum/atoum": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2.x-dev"
+        }
     }
 }
