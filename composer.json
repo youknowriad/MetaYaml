@@ -1,9 +1,9 @@
 {
     "name": "youknowriad/meta-yaml",
-    "description": "Meta-Yaml to validate Yaml using Yaml",
-    "name": "meta-yaml",
-    "description": "Meta-Yaml to validate Yaml using [Yaml|Xml|json] schemas",
-    "keywords": ["yaml", "validation", "schema"],
+    "type": "library",
+    "description": "Using [Yaml|Xml|json] schemas files to validate [Yaml|Xml|json] ",
+    "homepage": "http://github.com/romaricdrigon/MetaYaml",
+    "keywords": ["yaml", "xml", "json", "validation", "schema"],
     "license": "MIT",
     "autoload": {
         "psr-0": {
@@ -15,11 +15,6 @@
         "symfony/yaml": "2.*"
     },
     "require-dev": {
-        "atoum/atoum": "dev-master"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.2.x-dev"
-        }
+        "atoum/atoum": "dev-master#c6ec75d4cf132728e80ec8ed1470b83cb53fc1c9"	
     }
 }
