@@ -13,6 +13,7 @@ class ChoiceNodeValidator extends NodeValidator
         $valid = false;
         $message = '';
         $count_levels = -1;
+        $current_name = $name;
 
         foreach ($node[$this->schema_validator->getFullName('choices')] as $choice_config) {
             try {
@@ -21,6 +22,7 @@ class ChoiceNodeValidator extends NodeValidator
                 $valid = true;
                 break;
             } catch (NodeValidatorException $e) {
+                $current_name = $e->getNodePath();
                 $current_count_levels = count(explode('.', $e->getNodePath()));
 
                 if ($current_count_levels > $count_levels) {
@@ -31,7 +33,7 @@ class ChoiceNodeValidator extends NodeValidator
         }
 
         if (! $valid) {
-            throw new NodeValidatorException($name, "The choice node '$name' is invalid with error: $message");
+            throw new NodeValidatorException($current_name, $message);
         }
 
         return true;
