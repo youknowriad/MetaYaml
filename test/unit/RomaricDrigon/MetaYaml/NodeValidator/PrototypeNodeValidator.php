@@ -16,6 +16,7 @@ class PrototypeNodeValidator extends atoum\test
             ->and($config = array('_prototype' => array('_type' => 'number')))
             ->then
                 ->boolean($object->validate('test', $config, array('a' => 10, 'b' => 5)))->isEqualTo(true)
+                ->boolean($object->validate('test', $config, range(0, 300)))->isEqualTo(true)
                 ->exception(function() use($object, $config) { $object->validate('test', $config, 'test'); })
                     ->hasMessage("The node 'test' is not an array")
                 ->exception(function() use($object, $config) { $object->validate('test', $config, array('a' => 10, 'b' => 'test')); })
